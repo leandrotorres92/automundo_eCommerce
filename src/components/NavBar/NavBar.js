@@ -1,4 +1,6 @@
-import CartWidget from "./CartWidget.js";
+import "./Navbar.css";
+import navbarOptions from "../../helpers/menuStrings";
+import CartWidget from "../CartWidget/CartWidget.js";
 
 const NavBar = () => {
   return (
@@ -8,18 +10,11 @@ const NavBar = () => {
           Automundo
         </a>
         <ul className="containerLista">
-          <li>
-            <a href="/">Vehiculos</a>
-          </li>
-          <li>
-            <a href="/">Precios</a>
-          </li>
-          <li>
-            <a href="/">Postventa</a>
-          </li>
-          <li>
-            <a href="/">Financiacion</a>
-          </li>
+          {navbarOptions.map((navbarOp) => (
+            <li>
+              <a href="/">{navbarOp}</a>
+            </li>
+          ))}
         </ul>
         <a href="/">{/*aca iria la imagen del boton buscar*/}</a>
       </div>
