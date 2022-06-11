@@ -1,20 +1,20 @@
 import "./Navbar.css";
-import navbarOptions from "../../helpers/menuStrings";
 import CartWidget from "../CartWidget/CartWidget.js";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <nav className="navbar">
       <div className="navbarContainer">
-        <a className="logoMenu" href="/">
-          Automundo
-        </a>
+        <li className="logoMenu">Automundo</li>
         <ul className="containerLista">
-          {navbarOptions.map((navbarOp) => (
-            <li>
-              <a href="/">{navbarOp}</a>
-            </li>
-          ))}
+          <li>
+            <Link to="/">All Cars</Link>
+            <Link to="/marca/Jeep">Jeep</Link>
+            <Link to="/marca/Land Rover">Land Rover</Link>
+            <Link to="/marca/Chery">Chery</Link>
+            <Link to="/marca/Geely">Geely</Link>
+          </li>
         </ul>
         <a href="/">{/*aca iria la imagen del boton buscar*/}</a>
       </div>

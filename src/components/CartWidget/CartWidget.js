@@ -1,5 +1,5 @@
 import "./Cartwidget.css";
-import logocar from "../CartWidget/logo_car.png";
+import logocar from "../CartWidget/logo_cart.png";
 
 const CartWidget = () => {
   return (

@@ -1,13 +1,23 @@
+//import React, { useState } from "react";
 import NavBar from "./components/NavBar/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <BrowserRouter>
         <NavBar />
-        <ItemListContainer tittlePrimary="Autos nuevos 0km!!" />
-      </header>
+        <Routes>
+          <Route
+            path="/"
+            element={<ItemListContainer tittlePrimary="Autos nuevos 0km!!" />}
+          />
+          <Route path="/marca/:marcaId" element={<ItemListContainer />} />
+          <Route path="/detail/:productId" element={<ItemDetailContainer />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

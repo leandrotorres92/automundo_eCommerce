@@ -35,7 +35,7 @@ li {
   font-weight: 600;
   list-style-type: none;
   text-decoration: none;
-  padding: 0.5rem;
+  padding-right: 3rem;
 }
 
 a:hover {

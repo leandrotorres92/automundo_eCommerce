@@ -10,7 +10,7 @@
 
 .imgs {
   height: 300px;
-  width: 400px;
+  width: 400px;  
 }
 
 .namecar {
@@ -31,5 +31,9 @@
   font-size: 1.8rem;
   font-weight: 600;
   color: #8197ff;
+  padding: 8px;
+}
+
+.seedetail{
   padding: 8px;
 }
