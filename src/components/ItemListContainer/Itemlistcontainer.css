@@ -6,8 +6,16 @@
   color: #dde9ff;
 }
 
-.aviso{
-  color: white;
+.avisoEspera{
+  color:#ff994b;
   text-align: center;
-  padding-bottom: 1rem;
+  padding-top: 10rem;
+  font-size: 1.5rem
+}
+
+.avisoProximamente{
+  color:white;
+  text-align: center;
+  padding-top: 10rem;
+  font-size: 1.5rem
 }

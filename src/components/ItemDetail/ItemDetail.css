@@ -27,3 +27,22 @@
   font-size: 1.5rem;
   font-weight: 600;
 }
+
+h4 {
+  margin-top: 1rem;
+  color: rgb(247, 172, 80);
+}
+
+footer {
+  margin-top: 0.9rem;
+}
+
+.buttonFinalizar {
+  color: white;
+}
+
+.buttonFinalizar:hover {
+  color: #252e3d;
+  transition: 0.3s repeat;
+  color: #2fff2f;
+}

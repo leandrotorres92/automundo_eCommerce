@@ -1,9 +1,11 @@
 .btnCarrito {
   display: inline-flex;
-  width: 50px;
+  width: 75px;
   height: 50px;
   padding: 0.5rem;
   margin-right: 10rem;
   border-radius: 5px;
-  border: solid rgb(40, 103, 149);
+  border: bold rgb(40, 103, 149);
+  align-items: center;
+  font-size: 1.2rem;
 }

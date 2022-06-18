@@ -35,7 +35,7 @@ const ItemListContainer = ({ tittlePrimary }) => {
 
   if (loading) {
     return (
-      <div className="aviso">
+      <div className="avisoEspera">
         <h1>Loading...</h1>
       </div>
     );
@@ -47,7 +47,7 @@ const ItemListContainer = ({ tittlePrimary }) => {
       {products.length > 0 ? (
         <ItemList products={products} />
       ) : (
-        <h1 className="aviso">Coming soon!!</h1>
+        <h1 className="avisoProximamente">Coming soon!!</h1>
       )}
     </>
   );
