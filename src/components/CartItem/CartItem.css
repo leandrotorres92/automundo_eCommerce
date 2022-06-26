@@ -1,0 +1,28 @@
+.containerCartItem {
+  display: inline-flex;
+  justify-content: space-around;
+  background-color: rgb(35, 90, 166);
+  color: white;
+  font-weight: 500;
+  border: solid black;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  height: 100px;
+  width: 1000px;
+  margin-top: 2rem;
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+}
+
+.cartItemElements {
+  align-items: center;
+  padding-left: 1rem;
+}
+
+.cartItemButton {
+  align-items: center;
+  padding-left: 1rem;
+}

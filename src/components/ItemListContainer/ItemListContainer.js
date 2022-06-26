@@ -1,43 +1,43 @@
 import "./Itemlistcontainer.css";
-import { useState, useEffect } from "react";
-import { getProducts, getProductsByMarca } from "../CarProducts/CarProducts";
 import ItemList from "../ItemList/ItemsList";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { getDocs, collection, query, where } from "firebase/firestore";
+import { db } from "../../services/firebase";
 
 const ItemListContainer = ({ tittlePrimary }) => {
   const [products, setProducts] = useState([]);
 
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
-  const { marcaId } = useParams();
+  const { brandId } = useParams();
 
   useEffect(() => {
     setLoading(true);
 
-    if (!marcaId) {
-      getProducts()
-        .then((response) => {
-          setProducts(response);
-        })
-        .finally(() => {
-          setLoading(false);
+    const collectionRef = brandId
+      ? query(collection(db, "products"), where("brand", "==", brandId))
+      : collection(db, "products");
+
+    getDocs(collectionRef)
+      .then((response) => {
+        const productsFormatted = response.docs.map((doc) => {
+          return { id: doc.id, ...doc.data() };
         });
-    } else {
-      getProductsByMarca(marcaId)
-        .then((response) => setProducts(response))
-        .finally(() => {
-          setLoading(false);
-        });
-    }
-  }, [marcaId]);
+        setProducts(productsFormatted);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, [brandId]);
 
   console.log(products);
 
   if (loading) {
     return (
-      <div className="avisoEspera">
-        <h1>Loading...</h1>
-      </div>
+      <>
+        <h1 className="avisoEspera">Loading...</h1>
+      </>
     );
   }
 

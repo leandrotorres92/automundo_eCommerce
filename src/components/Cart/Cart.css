@@ -1,0 +1,24 @@
+.containerCart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerCartItems {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.cartTittle {
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  color: white;
+  text-align: center;
+}
+
+.buttonClear {
+  margin-top: 6rem;
+  height: 40px;
+  width: 150px;
+  font-weight: 600;
+}

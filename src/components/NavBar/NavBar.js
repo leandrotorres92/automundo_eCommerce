@@ -10,10 +10,10 @@ const NavBar = () => {
         <ul className="containerLista">
           <li>
             <Link to="/">All Cars</Link>
-            <Link to="/marca/Jeep">Jeep</Link>
-            <Link to="/marca/Land Rover">Land Rover</Link>
-            <Link to="/marca/Chery">Chery</Link>
-            <Link to="/marca/Geely">Geely</Link>
+            <Link to="/brand/Jeep">Jeep</Link>
+            <Link to="/brand/Land Rover">Land Rover</Link>
+            <Link to="/brand/Chery">Chery</Link>
+            <Link to="/brand/Geely">Geely</Link>
           </li>
         </ul>
         <a href="/">{/*aca iria la imagen del boton buscar*/}</a>

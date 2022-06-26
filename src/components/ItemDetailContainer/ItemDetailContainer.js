@@ -1,8 +1,9 @@
 import "./ItemDetailContainer.css";
 import { useState, useEffect } from "react";
-import { getProductById } from "../CarProducts/CarProducts";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
+import { getDoc, doc } from "firebase/firestore";
+import { db } from "../../services/firebase";
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState();
@@ -10,8 +11,11 @@ const ItemDetailContainer = () => {
   const { productId } = useParams();
 
   useEffect(() => {
-    getProductById(productId).then((response) => {
-      setProduct(response);
+    const docRef = doc(db, "products", productId);
+
+    getDoc(docRef).then((doc) => {
+      const productFormatted = { id: doc.id, ...doc.data() };
+      setProduct(productFormatted);
     });
   }, [productId]);
 

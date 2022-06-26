@@ -3,13 +3,17 @@ import Counter from "../ItemCount/ItemCount";
 import { useState, useContext } from "react";
 import CartContext from "../../context/CartContext";
 import { Link } from "react-router-dom";
+import NotificationContext from "../../notification/Notifications";
 
 const ItemDetail = ({ id, name, img, price, description, stock }) => {
   const [quantityAdded, setQuantityAdded] = useState(0);
 
   const { addItem } = useContext(CartContext);
 
+  const setNotification = useContext(NotificationContext);
+
   const handleOnAdd = (quantity) => {
+    setNotification("success", "Add to Cart");
     addItem({ id, name, price, quantity });
     setQuantityAdded(quantity);
   };
@@ -25,7 +29,7 @@ const ItemDetail = ({ id, name, img, price, description, stock }) => {
           <br></br>
           <p>{description}</p>
         </div>
-        <span className="detailPrice">{price}</span>
+        <span className="detailPrice">$ {price}</span>
         <footer>
           {quantityAdded === 0 ? (
             <Counter stock={stock} onAdd={handleOnAdd} />
