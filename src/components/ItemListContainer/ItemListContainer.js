@@ -10,13 +10,13 @@ const ItemListContainer = ({ tittlePrimary }) => {
 
   const [loading, setLoading] = useState(false);
 
-  const { brandId } = useParams();
+  const { typeId } = useParams();
 
   useEffect(() => {
     setLoading(true);
 
-    const collectionRef = brandId
-      ? query(collection(db, "products"), where("brand", "==", brandId))
+    const collectionRef = typeId
+      ? query(collection(db, "products"), where("type", "==", typeId))
       : collection(db, "products");
 
     getDocs(collectionRef)
@@ -29,7 +29,7 @@ const ItemListContainer = ({ tittlePrimary }) => {
       .finally(() => {
         setLoading(false);
       });
-  }, [brandId]);
+  }, [typeId]);
 
   console.log(products);
 

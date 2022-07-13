@@ -5,10 +5,8 @@ import { Link } from "react-router-dom";
 import CartContext from "../../context/CartContext";
 
 const CartWidget = () => {
-  const { getCartQuantity } = useContext(CartContext);
-
-  const totalQuantity = getCartQuantity();
-
+  const { totalQuantity } = useContext(CartContext);
+  
   return (
     <Link to="/Cart" className="btnCarrito">
       <img src={logocar} alt="CartImg" />

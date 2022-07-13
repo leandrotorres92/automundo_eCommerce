@@ -1,33 +1,47 @@
 import "./Cart.css";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import CartContext from "../../context/CartContext";
-import CartItem from "../CartItem/CartItem";
+import CartItemList from "../CartItemList/CarItemList";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
-  const { cart, getCartQuantity, clearCart, totalToPay } = useContext(CartContext);
+  const [loading, setLoading] = useState(false);
 
-  const quantity = getCartQuantity();
+  const { cart, totalQuantity, getTotal, clearCart } = useContext(CartContext);
 
-  if (quantity === 0) {
+  const total = getTotal();
+
+  const handleCreateOrder = () => {
+    setLoading(true);
+    if (loading) {
+      return <h1 className="cartTittle">Se esta generando su orden...</h1>;
+    }
+  };
+
+  if (totalQuantity === 0) {
     return <h1 className="cartTittle">No hay productos en la lista...</h1>;
   }
-
+  
   return (
     <div className="containerCart">
-      <h1 className="cartTittle">Cart</h1>
+      <h1 className="cartTittle">Su cotizacion</h1>
       <div className="containerCartItems">
-        {cart.map((prod) => (
-          <CartItem key={prod.id} {...prod} />
-        ))}
+        <CartItemList productsAdded={cart} />
       </div>
-      <div>
-        <p>Total: $ {totalToPay()}</p>
+      <div className="totalCart">
+        <p>Total: $ {total}</p>
       </div>
       <button className="buttonClear" onClick={() => clearCart()}>
         Clear Cart
       </button>
+      <Link
+        className="buttonCreateorder"
+        onClick={() => handleCreateOrder()}
+        to="/checkout"
+      >
+        Create Order
+      </Link>
     </div>
   );
 };
-
 export default Cart;

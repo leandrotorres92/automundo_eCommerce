@@ -3,14 +3,14 @@ import Counter from "../ItemCount/ItemCount";
 import { useState, useContext } from "react";
 import CartContext from "../../context/CartContext";
 import { Link } from "react-router-dom";
-import NotificationContext from "../../notification/Notifications";
+import { useNotification } from "../../notification/Notifications";
 
 const ItemDetail = ({ id, name, img, price, description, stock }) => {
   const [quantityAdded, setQuantityAdded] = useState(0);
 
   const { addItem } = useContext(CartContext);
 
-  const setNotification = useContext(NotificationContext);
+  const setNotification = useNotification();
 
   const handleOnAdd = (quantity) => {
     setNotification("success", "Add to Cart");
@@ -39,7 +39,6 @@ const ItemDetail = ({ id, name, img, price, description, stock }) => {
             </Link>
           )}
         </footer>
-
         <h4>Unidades Disponibles: {stock}</h4>
       </div>
     </>

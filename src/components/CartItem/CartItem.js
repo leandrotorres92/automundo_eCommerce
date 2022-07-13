@@ -25,7 +25,12 @@ const CartItem = ({ id, name, quantity, price }) => {
           <p>SubTotal: $ {price * quantity}</p>
         </div>
         <div className="cartItemButton">
-          <button onClick={() => handleRemove(id)}>Remove</button>
+          <button
+            className="cartItemButton_remove"
+            onClick={() => handleRemove(id)}
+          >
+            Remove
+          </button>
         </div>
       </div>
     </div>

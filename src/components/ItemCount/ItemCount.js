@@ -16,10 +16,10 @@ const Counter = ({ initial = 0, stock, onAdd }) => {
 
   return (
     <div className="counter">
-      <button onClick={increment}>+</button>
-      <h1>{count}</h1>
-      <button onClick={decrement}>-</button>
-      <button onClick={() => onAdd(count)}>Cotizar</button>
+      <button className="buttonCounter" onClick={increment}>+</button>
+      <h1 className="tittleCounter">{count}</h1>
+      <button className="buttonCounter" onClick={decrement}>-</button>
+      <button className="buttonCounter" onClick={() => onAdd(count)}>Cotizar</button>
     </div>
   );
 };

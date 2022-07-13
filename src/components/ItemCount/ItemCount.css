@@ -4,13 +4,13 @@
   color: white;
 }
 
-button{
+.buttonCounter{
     border-radius: 30px;
     font-weight: 600;
     font-size: 1rem;
     margin-left: 0.5rem;
 }
 
-h1{
+.tittleCounter{
     margin-left: 0.5rem;
 }

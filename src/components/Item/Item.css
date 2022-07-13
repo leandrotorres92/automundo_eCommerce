@@ -5,35 +5,47 @@
   margin-bottom: 20px;
   margin-left: 20px;
   background-color: #323a49;
+  box-shadow: #6fa1fe 0px 3px 5px;
   border-radius: 8px;
 }
 
 .imgs {
   height: 300px;
-  width: 400px;  
+  width: 400px;
 }
 
 .namecar {
   font-size: 1.2rem;
   font-weight: 400;
   color: #ffffff;
-  padding: 8px;
+  padding: 6px;
 }
 
 .origin {
   font-size: 1rem;
   font-weight: 400;
-  color: #bad2ff;
-  padding: 8px;
+  color: #cbeeff;
+  padding: 10px;
 }
 
 .price {
   font-size: 1.8rem;
   font-weight: 600;
   color: #8197ff;
-  padding: 8px;
+  padding: 10px;
 }
 
-.seedetail{
-  padding: 8px;
+.seedetail {
+  margin-top: 0.5rem;
+}
+
+.seedetail_link {
+  padding: 10px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.seedetail_link:hover{
+  color: #f5b555;
+  transition: 0.5s;
 }
