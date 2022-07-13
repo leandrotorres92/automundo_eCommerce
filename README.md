@@ -66,7 +66,7 @@ FORMA DE INSTALAR LA APLICACION:
             Escribir el comando:
             $ npm start
 
-CONTRIBUCIONES O CRITICAS, siempre falta algo! Asique cualquier cosa para agregar no hay problema, podes proceder de la siguiente forma:
+CONTRIBUCIONES O CRITICAS, siempre falta algo! Asique cualquier cosa para agregar no hay problema, podes proceder de la siguiente manera:
 
     1- Realiza el Fork del Proyecto
 
