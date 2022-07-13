@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/eCommerce_Torres/static/css/main.81879bea.css",
-    "main.js": "/eCommerce_Torres/static/js/main.0a4b3cbd.js",
-    "index.html": "/eCommerce_Torres/index.html",
-    "main.81879bea.css.map": "/eCommerce_Torres/static/css/main.81879bea.css.map",
-    "main.0a4b3cbd.js.map": "/eCommerce_Torres/static/js/main.0a4b3cbd.js.map"
+    "main.css": "/automundo_eCommerce/static/css/main.f3edc8cf.css",
+    "main.js": "/automundo_eCommerce/static/js/main.1fbbf67c.js",
+    "index.html": "/automundo_eCommerce/index.html",
+    "main.f3edc8cf.css.map": "/automundo_eCommerce/static/css/main.f3edc8cf.css.map",
+    "main.1fbbf67c.js.map": "/automundo_eCommerce/static/js/main.1fbbf67c.js.map"
   },
   "entrypoints": [
-    "static/css/main.81879bea.css",
-    "static/js/main.0a4b3cbd.js"
+    "static/css/main.f3edc8cf.css",
+    "static/js/main.1fbbf67c.js"
   ]
 }
