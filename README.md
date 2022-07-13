@@ -66,17 +66,18 @@ FORMA DE INSTALAR LA APLICACION:
             Escribir el comando:
             $ npm start
 
-CONTRIBUCIONES O CRITICAS, siempre falta algo! Asique cualquier cosa para agregar es bienvenido, podes proceder se hara de la siguiente forma:
+CONTRIBUCIONES O CRITICAS, siempre falta algo! Asique cualquier cosa para agregar no hay problema, podes proceder de la siguiente forma:
 
     1- Realiza el Fork del Proyecto
 
-    2- Crea tu Branch en tu terminal(git checkout -b "feature/lo que quieras ponerle")
+    2- Crea tu Branch en tu terminal (git checkout -b "feature/lo que quieras ponerle")
 
     3- Commitea tus cambios (git commit -m 'ya sabes')
 
     4- Pushea la Branch (git push origin feature/"lo que quieras ponerle")
 
-    5- Abrí una Pull Request
+    5- Genera un Pull Request
 
 AUTOR
+
 Leandro Torres, estudiante de Tecnologias de Programacion en CODERHOUSE.
